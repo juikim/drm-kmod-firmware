@@ -6,16 +6,13 @@ set -e
 scriptdir=$(cd $(dirname $0) && pwd)
 fwdir=$scriptdir/../amdgpukmsfw-files
 
-for dir in $scriptdir/*; do
-	if [ ! -d $dir ]; then
-		continue
-	fi
+for dir in $(find $scriptdir -type d -depth 1); do
 	rm -rf $dir
 done
 
-for file in $fwdir/*.uu; do
+for file in $(find $fwdir -name '*.bin'); do
 	base=$(basename $file)
-	img=${base%.bin.uu}
+	img=${base%.bin}
 	echo "Image: $img"
 
 	mkdir -p $scriptdir/$img
