@@ -1,6 +1,16 @@
 # $FreeBSD$
 
 SUBDIR=									\
+	arcturus_asd							\
+	arcturus_gpu_info						\
+	arcturus_mec							\
+	arcturus_mec2							\
+	arcturus_rlc							\
+	arcturus_sdma							\
+	arcturus_smc							\
+	arcturus_sos							\
+	arcturus_ta							\
+	arcturus_vcn							\
 	banks_k_2_smc							\
 	bonaire_ce							\
 	bonaire_k_smc							\
@@ -212,6 +222,7 @@ SUBDIR=									\
 	polaris11_smc_sk						\
 	polaris11_uvd							\
 	polaris11_vce							\
+	polaris12_32_mc							\
 	polaris12_ce							\
 	polaris12_ce_2							\
 	polaris12_k_mc							\
